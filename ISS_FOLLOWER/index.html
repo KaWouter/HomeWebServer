@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <script src="scripts/locator.js"></script>
+    <link rel="stylesheet" href="style/style.css" />
+
+    <title>International Space Station Tracker</title>
+  </head>
+  <body>
+    <header>
+      <h1>International Space Station Tracker</h1>
+    </header>
+    <div class="full">
+      <div class="data">
+        <p id="name">Name :</p>
+        <p id="latitude">Latitude :</p>
+        <p id="longitude">Longitude :</p>
+        <p id="altitude">Longitude :</p>
+        <p id="velocity">Velocity :</p>
+        <p id="time">Time :</p>
+        <button type="button" id="refreshButton" onclick="fetchData()">
+          Refetch Data
+        </button>
+      </div>
+      <div id="content">
+        <div id="map"></div>
+      </div>
+    </div>
+
+    <footer>
+        <p class = "footerText">Made By Wouter Bonnarens</p>
+    </footer>
+    <script>
+      window.onload = function () {
+        fetchData();
+      };
+    </script>
+  </body>
+</html>
